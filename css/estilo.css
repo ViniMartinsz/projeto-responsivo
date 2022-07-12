@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* CSS Reset */
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 { 
+    background-color: black;
+    color: white;
+    margin: 0; 
+    padding-left: 10px;
+}
+
+
+.imagem-decorativa {
+    background-image: url(../imagens/teclado.jpg);
+    height: 450px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+
+footer {
+    background-image: linear-gradient(45deg, black, blue);
+
+    height: 70px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+
+    /* Flexbox: recursos de alinhamento e espaçamento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seletor descendente */
+.treinamentos section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 32%;
+}
+
+.treinamentos {
+    display: flex;
+    
+    /* space-around, space-between, space-evenly */
+    justify-content: space-between;
+}
+
+
+.flutuar-imagem {
+    width: 150px;
+    float: left;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 650px){
+    .treinamentos { flex-direction: column;}
+    .treinamentos section {
+        width: auto;
+    }
+}
+

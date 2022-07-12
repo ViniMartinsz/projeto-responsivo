@@ -1,0 +1,59 @@
+.menu {
+    list-style: none;
+    margin: 0;
+    padding-left: -0px;
+    background-color: blue;
+    text-decoration: none;
+ 
+
+    /* Resolvendo o efeito colateral do float */
+    overflow: hidden;
+}
+    
+.menu li { float: left;}
+
+.menu a, .menu a:focus{
+    color: white;
+    text-decoration: none;
+    padding: 14px 26px;
+    display: block;
+}
+
+.menu a:hover,.menu a:focus {
+
+    background-color: white;
+    color: blue;
+
+}
+
+/* VERSÃO FINAL */
+
+.menu li.icone { display: none; }
+
+@media screen and (max-width: 760px){
+
+    
+    .menu li { display: none; }
+
+
+    .menu li.icone {
+        display: block;
+        float: right;
+    }
+
+/* Importante para o posicionamento dos itens contidos dentro do menu */
+    .menu.responsivo { position: relative; }    
+    
+    /* Posicionando o ícone/menu na parte superior/direita do menu */
+    .menu.responsivo li.icone {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Remoção do float e garantindo a exibição em linha */
+    .menu.responsivo li {
+        float: none;
+        display: inline;
+    }
+}
